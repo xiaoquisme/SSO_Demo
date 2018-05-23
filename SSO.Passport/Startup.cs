@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using SSO.Passport.Data;
 using SSO.Passport.Models;
 using SSO.Passport.Services;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SSO.Passport
 {
@@ -27,7 +29,7 @@ namespace SSO.Passport
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseInMemoryDatabase("database"));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -36,7 +38,20 @@ namespace SSO.Passport
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
-            services.AddMvc();
+            services.AddDataProtection()
+                    .PersistKeysToFileSystem(new System.IO.DirectoryInfo(@"E:\jointown"))
+                    .SetApplicationName("SharedCookieApp");
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.Domain = ".jointown.com";
+                options.Cookie.Name = ".AspNet.SharedCookie";
+            });
+
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

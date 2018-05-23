@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace SSO.Passport
+namespace SSO.DefaultSite
 {
     public class Program
     {
@@ -19,7 +19,6 @@ namespace SSO.Passport
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://localhost:5000")
                 .UseStartup<Startup>()
                 .Build();
     }
