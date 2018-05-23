@@ -8,3 +8,4 @@
    127.0.0.1 test.jointown.com
    ```
  * `IIS`绑定的时候，要用`https`
+ * 需要在`E盘`创建文件夹`jointown`
