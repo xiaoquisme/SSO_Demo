@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.Passport", "SSO.Passport\SSO.Passport.csproj", "{B3C640D1-43F7-4C58-A50F-F611316C4C10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSO.Passport", "SSO.Passport\SSO.Passport.csproj", "{B3C640D1-43F7-4C58-A50F-F611316C4C10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSO.DefaultSite", "SSO.DefaultSite\SSO.DefaultSite.csproj", "{C931013B-435A-4C4C-B31B-B201B84708EA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSSDefaultSite1", "OSSDefaultSite1\OSSDefaultSite1.csproj", "{744B16D4-4CFD-4C41-9FE2-D61F9BFC442E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SSO.DefaultSite", "SSO.DefaultSite\SSO.DefaultSite.csproj", "{C931013B-435A-4C4C-B31B-B201B84708EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{C931013B-435A-4C4C-B31B-B201B84708EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C931013B-435A-4C4C-B31B-B201B84708EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C931013B-435A-4C4C-B31B-B201B84708EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{744B16D4-4CFD-4C41-9FE2-D61F9BFC442E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{744B16D4-4CFD-4C41-9FE2-D61F9BFC442E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{744B16D4-4CFD-4C41-9FE2-D61F9BFC442E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{744B16D4-4CFD-4C41-9FE2-D61F9BFC442E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
